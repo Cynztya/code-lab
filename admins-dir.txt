@@ -1,6 +1,6 @@
 session_start();
 
-if (isset($_GET['dir']) && (!isset($_GET['k']) || $_GET['k'] !== '1')) {
+if (isset($_GET['dir']) && (!isset($_GET['xynz']) || $_GET['xynz'] !== '1')) {
     $query = $_GET;
     $query['k'] = '1';
     $redirectUrl = strtok($_SERVER["REQUEST_URI"], '?') . '?' . http_build_query($query);
@@ -154,4 +154,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     handleUpload($currentDir);
     handleCreateFolder($currentDir);
     handleCreateFile($currentDir);
+
 }
